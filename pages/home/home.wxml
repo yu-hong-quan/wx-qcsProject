@@ -1,0 +1,60 @@
+<!--pages/home/home.wxml-->
+
+<view class='home-Wapper'>
+  <!-- 回到顶部按钮 -->
+  <view class='goTop' wx:if="{{floorstatus}}" bindtap='goTop'>
+    ︿
+  </view>
+  <!-- 首页顶部输入框 -->
+  <view class='top-Input-Souccess'>
+    <image class='souccessImg' src='../../images/搜索.png'></image>
+    <input class='Input-Souccess' type='text' placeholder='面膜' disabled='true'  placeholder-class='placeholder-class'></input>
+  </view>
+  <!-- 首页轮播图 -->
+  <view class='swiper'>
+    <swiper></swiper>
+  </view>
+  <!-- 首页四格导航入口 -->
+  <view class='thre-nav'>
+    <view wx:for='{{threData}}' wx:key='{{index}}' class='thre-navImg-wapper'>
+      <image src='{{item.image_url}}' class='thre-navImg'>
+      </image>
+    </view>
+  </view>
+  <!-- 首页领卷中心模块 -->
+  <view class='couponWapper'>
+     <image src='{{couponData.image}}' class='couponImg'></image>
+  </view>
+  <!-- 首页新人红包模块 -->
+  <view class='newbieRedPacketWapper'>
+    <image src='{{newbieRedPacketData}}' class='newbieRedPacketImg'></image>
+  </view>
+  <!-- 首页倒计时模块 -->
+  <view class='TodaySkileyWapper'>
+    <view  class='TodaySkiley'>
+      <text class='jrms'>今日秒杀</text>
+      <countDown></countDown>
+      <text class='gdhh'>更多好货 ></text>
+    </view>
+    <view class='dataList'>
+      <view wx:for='{{countListData}}' wx:key='{{index}}' class='List'>
+        <image src='{{item.image_url}}' class='ListImg'></image>
+        <view class='ListTitle'>{{item.item_short_name}}</view>
+        <view>
+          <text>{{item.promotion_price/100}}</text>
+          <text>{{item.market_price/100}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 首页爆燃热销榜 -->
+  <view class='ExplosiveHotList-Wapper' style="background-image: url('{{commodity[2].content.bg.image}}')">
+      <view wx:for='{{6}}' wx:key='{{index}}' class='ListWapper'>
+        
+      </view>
+  </view>
+  <!-- 早春护肤 -->
+  <view class='shopingImg' >
+    <image src='{{shopingImg.image}}' bindtap='ActiveDroductList' data-title='{{shopingImg.link.desc}}'></image>
+  </view>
+</view>

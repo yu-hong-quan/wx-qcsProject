@@ -1,0 +1,77 @@
+.CommodityDetails-Wapper{
+  width: 100%;
+  height: 100%;
+}
+.goHome,.goShoping{
+  width: 70rpx;
+  height: 70rpx;
+  position: fixed;
+  z-index: 9999;
+  bottom: 240rpx;
+  right: 20rpx;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #fafafa;
+  box-shadow: 0rpx 0rpx 0rpx 5rpx #eee;
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 70rpx;
+  color: #fff;
+}
+.goShoping{
+  bottom: 150rpx;
+}
+.CommodityDetails-Image-Wapper{
+  width: 100%;
+  height: 800rpx;
+  
+}
+.CommodityDetails-Image-Wapper image{
+  width: 100%;
+  height: 100%;
+}
+.BottomTab{
+  width: 100%;
+  height: 110rpx;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-top: 1px solid #ccc;
+  display: flex;
+}
+.title{
+  width: 100%;
+  height: auto;
+}
+.commodityTitle{
+  font-size: 28rpx;
+}
+.commodityPrice{
+  font-size: 35rpx;
+  font-weight: 500;
+  margin: 20rpx 0rpx;
+}
+.jrgwc, .gm{
+  width: 50%;
+  height: 100%;
+  font-size:40rpx;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.jrgwc{
+  background: #FE91AE;
+}
+.gm{
+  background: #FF6692;
+}
+.CommodityListImg{
+  width: 100%;
+  margin-bottom: 115rpx;
+}
+.CommodityListImg image{
+  width: 100%;
+ 
+}

@@ -1,0 +1,17 @@
+/* components/common/countDown/countDown.wxss */
+.countDownWapper{
+  width: 170rpx;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.text{
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  margin: 0 5rpx;
+  width: 100rpx;
+  font-size: 30rpx;
+  text-align: center;
+}

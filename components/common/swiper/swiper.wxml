@@ -1,0 +1,20 @@
+<!--components/common/swiper/swiper.wxml-->
+<view class='swiperWapper'>
+  <swiper
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}"
+    duration="{{duration}}"
+    indicator-dots="indicatorDots"
+    indicator-color='rgba(255,255,255,0.5)'
+    indicator-active-color="#fff"
+    circular="true"
+    class='swiper'
+  >
+  <block wx:for="{{swiperData}}" wx:key='{{index}}'>
+    <swiper-item>
+      <image class='swiper-Img' src='{{item.image_url}}'></image>
+    </swiper-item>
+  </block >
+  </swiper>
+</view>

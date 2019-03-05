@@ -1,0 +1,37 @@
+<!--pages/members/members.wxml-->
+<view class='MemberCenter-Wapper'>
+  <view class='MemberCenter-TopBanner'>
+    <image src='https://asset.watsons.com.cn/act-static/2018/0319_membercard_bonus/a65e1269a743dfeb8b674fb573728271.png'></image>
+  </view>
+  <view class='MemberCenter-TopNav'>
+    <image src='https://asset.watsons.com.cn/act-static/2018/0319_membercard_bonus/df97fd89cd6444ec8fad859df2e97b33.png'></image>
+  </view>
+  <view class='MemberCenter-ListNav'>
+    <view wx:for='{{ListNav}}' wx:key='{{index}}' class="{{activeNum==index?'active':''}}" bindtap='ListNavBind' data-index='{{index}}'>
+      {{item}}
+    </view>
+  </view>
+  <view class='MemeberCenter-ListData'>
+    <view wx:for='{{ListData}}' wx:key='{{index}}' class='ListWapper'>
+      <view class='image-Wapper'>
+        <image src='{{item.over_image_url}}'></image>
+      </view>
+      <view class='ListName'>
+        <view class='List-sale_point' wx:if='{{item.sale_point!=""}}'>{{item.sale_point}}</view>
+        <view class='List-sale_point' wx:else>{{item.brand_name}}{{item.category_name}}</view>
+        <view class='List-item-short-name'>{{item.item_short_name}}</view>
+      </view>
+      <view class='ListPrice'>
+        <view class='ListPrice-top'>
+          <text class='max_market_price'>￥{{item.max_market_price/100}}</text>
+          <text >
+            <text class='members'>会员</text>
+            <text class='max_vip_price'>￥{{item.max_vip_price/100}}</text>
+          </text>
+          <image class='Cath' src='https://asset.watsons.com.cn/topic/static/2ad3fd35dd5989062dacdda8dec5055b.png'></image>
+        </view>
+        <text class='specials' wx:if='{{item.specials!=""?"该商品不参加秒杀":item.specials}}'>{{item.specials}}</text>
+      </view>
+    </view>
+  </view>
+</view>

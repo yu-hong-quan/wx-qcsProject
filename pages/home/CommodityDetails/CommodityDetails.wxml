@@ -1,0 +1,23 @@
+<!--pages/home/CommodityDetails/CommodityDetails.wxml-->
+<view class='CommodityDetails-Wapper'>
+  <view class='goHome' bindtap='goHome' >
+    首页
+  </view>
+  <view class='goShoping' bindtap='goShoping'>
+    购物
+  </view>
+  <view class='CommodityDetails-Image-Wapper'>
+    <image src='{{commodityImg}}'></image>
+  </view>
+  <view class='title'>
+    <view class='commodityTitle'>{{commodityTitle}}</view>
+    <view class='commodityPrice'>￥{{commodityPrice}}</view>
+  </view>
+  <view class='BottomTab'>
+    <view class='jrgwc' bindtap='jiaRuGoWuCath' data-price='{{commodityPrice}}' data-titleName='{{commodityTitle}}' data-img='{{commodityImg}}' data-num='1'>加入购物车</view>
+    <view class='gm' >购买</view>
+  </view>
+  <view class='CommodityListImg'>
+    <image src='{{item}}' wx:for='{{commodityListDataImg}}' mode='widthFix' wx:key='{{index}}'></image>
+  </view>
+</view>

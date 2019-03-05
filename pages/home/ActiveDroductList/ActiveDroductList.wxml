@@ -1,0 +1,38 @@
+<!--pages/home/ActiveDroductList /ActiveDroductList.wxml-->
+<view>
+  <view class='goHome' bindtap='goHome'>
+      首页
+  </view>
+  <view class='goShoping' bindtap='goShoping'>
+    购物
+  </view>
+  <view class='MemberCenter-ListNav'>
+    <view wx:for='{{ListNav}}' wx:key='{{index}}' class="{{activeNum==index?'active':''}}" bindtap='ListNavBind' data-index='{{index}}'>
+      {{item}}
+    </view>
+  </view>
+  <view class='MemeberCenter-ListData'>
+    <view wx:for='{{ListData}}' wx:key='{{index}}' class='ListWapper' bindtap='brackCommodityDetails' data-id='{{item.item_uid}}' data-img='{{item.over_image_url}}' data-salePoint='{{item.sale_point}}' data-branNname='{{item.brand_name}}' data-shortName='{{item.item_short_name}}' data-maxPrice='{{item.max_price/100}}' data-maxVipPrice='{{item.max_vip_price/100}}'>
+      <view class='image-Wapper'>
+        <image src='{{item.over_image_url}}'></image>
+      </view>
+      <view class='ListName'>
+        <view class='List-sale_point' wx:if='{{item.sale_point!=""}}'>{{item.sale_point}}</view>
+        <view class='List-sale_point' wx:else>{{item.brand_name}}{{item.category_name}}</view>
+        <view class='List-item-short-name'>{{item.item_short_name}}</view>
+      </view>
+      <view class='ListPrice'>
+        <view class='ListPrice-top'>
+          <text class='max_market_price'>￥{{item.max_price/100}}</text>
+          <text wx:if='{{item.max_vip_price!=0}}'>
+            <text class='members'>会员</text>
+            <text class='max_vip_price'>￥{{item.max_vip_price/100}}</text>
+          </text>
+          <image class='Cath' src='https://asset.watsons.com.cn/topic/static/2ad3fd35dd5989062dacdda8dec5055b.png'></image>
+        </view>
+        <text class='specials' wx:if='{{item.specials!=""?"该商品不参加秒杀":item.specials}}'>{{item.specials}}</text>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{showBln}}" class='showBln'>------到底了哦------</view>
+</view>

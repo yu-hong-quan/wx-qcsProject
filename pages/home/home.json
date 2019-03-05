@@ -1,0 +1,11 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "屈臣氏官方商城",
+  "backgroundColor": "#eeeeee",
+  "backgroundTextStyle": "light",
+  "usingComponents":{
+    "swiper":"/components/common/swiper/swiper",
+    "countDown":"/components/common/countDown/countDown"
+  }
+}

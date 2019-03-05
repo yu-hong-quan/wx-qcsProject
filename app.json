@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/members/members",
+    "pages/discover/discover",
+    "pages/shoppingCath/shoppingCath",
+    "pages/my/my",
+    "components/common/swiper/swiper",
+    "pages/home/ActiveDroductList/ActiveDroductList",
+    "pages/home/CommodityDetails/CommodityDetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "./images/shouye.png",
+        "selectedIconPath": "./images/shouye-active.png"
+      },
+      {
+        "pagePath": "pages/members/members",
+        "text": "会员专区",
+        "iconPath": "./images/huiyuan.png",
+        "selectedIconPath": "./images/huiyuan-active.png"
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现",
+        "iconPath": "./images/faxian.png",
+        "selectedIconPath": "./images/faxian-active.png"
+      },
+      {
+        "pagePath": "pages/shoppingCath/shoppingCath",
+        "text": "购物车",
+        "iconPath": "./images/gouwuche.png",
+        "selectedIconPath": "./images/gouwuche-active.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/wode.png",
+        "selectedIconPath": "./images/wode-active.png"
+      }
+    ]
+  }
+}

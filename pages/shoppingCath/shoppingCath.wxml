@@ -1,0 +1,12 @@
+<view class='ShopingCath-Wapper'>
+  <view wx:for='{{commodityCath}}' wx:key='{{indexx}}'>
+    <view>
+      <image src='{{item.img}}'></image>
+    </view>
+    <view>
+      <text>{{item.titlename}}</text>
+      <text>{{item.price}}</text>
+    </view>
+    <view></view>
+  </view>
+</view>

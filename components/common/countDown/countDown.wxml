@@ -1,0 +1,6 @@
+<!--components/common/countDown/countDown.wxml-->
+<view class='countDownWapper'>
+  <text class='text'>{{m}}</text>:
+  <text class='text'>{{h}}</text>:
+  <text class='text'>{{s}}</text>
+</view>
